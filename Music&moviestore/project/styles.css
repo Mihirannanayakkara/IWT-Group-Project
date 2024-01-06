@@ -1,0 +1,103 @@
+/*Google Fonts-Poppins*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+.container{
+    margin-bottom: 100px;
+    height: 100vh;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(255, 255, 255);
+    margin-bottom: 50px;
+}
+.form-content{
+    margin-bottom: 100px;
+    max-width: 430px;
+    width: 200px;
+    padding: 30px;
+    border-radius: 6px;
+    background: aliceblue;
+}
+header{
+    font-size: 28px;
+    font-weight: 600px;
+    color: black;
+    text-align: center;
+}
+form{
+    margin-bottom: 100px;
+    margin-top: 30px;
+   
+   
+}
+
+.input{
+    height: 45px;
+    width: 100%;
+    margin-top: 10px;
+    border-radius: 6px;
+   
+}
+#mail{
+    height: 45px;
+    width: 100%;
+    margin-top: 10px;
+    border-radius: 6px;
+}
+#password{
+    height: 45px;
+    width: 100%;
+    margin-top: 10px;
+    border-radius: 6px;
+}
+.btn{
+    margin-top: 30PX;
+    margin-bottom: 30px;
+    height: 200%;
+    width: 100%;
+    border: none;
+    font-size: 16px;
+    font-weight: 400;
+    border-radius: 6px;
+    background-color: aquamarine;
+    cursor: pointer;
+}
+.btn:hover{
+    background-color: yellow;
+}
+.eye-icon{
+    position: absolute;
+    top: 48%;
+    transform: translateY(-300%);
+    transform:translateX(-150%);
+    font-size: 18px;
+    color: #8b8b8b;
+    cursor: pointer;
+}
+    
+.form-link{
+    text-align: center;
+    margin-top: 10px;
+}
+.form a{
+    color: blue;
+    text-decoration: none;
+}
+.form a:hover{
+    text-decoration: underline;
+}
+.line{
+    position: relative;
+    height: 1px;
+    width: 100%;
+    margin: 36px 0;
+    background-color: #d4d4d4;
+}

@@ -1,0 +1,43 @@
+
+.MMname{
+
+    margin-top: 100px;
+    font-family:monospace;
+    font-size: 30px;
+    font-style:initial;
+    color: honeydew;
+    margin-bottom:10px ;
+
+}
+
+.Mcategory {
+
+    margin-top: 35px;
+    display: flex;
+    flex-wrap: wrap;
+    gap:100px;
+    transform:translateX(24%);
+    
+  }
+  
+  .Mcategory img{
+  
+    width:200px;
+    height:280px;
+    
+  
+  }
+  .Mcategory div:hover img { /*div danne wena wenama img walata wda krnna gnna*/
+
+    transform:scale(0.95) ;
+  }
+
+  .Mmusic {
+
+    margin-top: 35px;
+    display: flex;
+    flex-wrap: wrap;
+    gap:100px;
+  
+    
+  }

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Boxicons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    
+    <section class="container form">
+        <div class="form login">
+            <div class="form-content">
+                <header>Create an Account</header>
+                
+                <form onsubmit="return validateForm()" id="createAccountForm" method="post" action="submitCreate.php">
+                    <div class="input-field">
+                        <input type="text" name="fname" placeholder="First Name" class="input" id="fname">
+                        <input type="text" name="lname" placeholder="Last Name" class="input" id="lname">
+                        
+                       
+                       <input type="Email" placeholder="Email" id="mail" name="mail" pattern="[a-z0-9._%+-]+@[a-z0-9._%+-]+\.[a-z]{2,3}" title="abc@gmai.com" required>
+                       <input type="password" placeholder="Password" class="input" name="pwd1"  id="p1"  required>
+                        <input type="password" placeholder="Confirm Password" class="input" name="pwd2" id="p2">
+                    </div>
+
+                    <div class="button-field">
+                        <button class="btn" name="submit" onclick="validateForm()">Create</button>
+                    </div>
+
+                    <div class="form-link">
+                        <span>Already have an account? <a href="log.html" class="signup-link"> Login</a></span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,161 @@
+<?php
+
+require '../admin/config.php';
+
+// Create operation
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
+  $paymentType = $_POST["ptype"];
+  $cardHolderName = $_POST["cardHolderName"];
+  $cardNumber = $_POST["cardNumber"];
+  $cvvNumber = $_POST["cvv"];
+
+  $sql = "INSERT INTO payment(p_id,p_type, c_name, c_number, cvv_number) VALUES ('','$paymentType', '$cardHolderName', '$cardNumber', '$cvvNumber')";
+
+  if ($conn->query($sql)) {
+    
+    echo"<script> alert('Record Inserted Successfully ')
+        window.location.replace('paymentsummary.php');</script>";
+
+  } else {
+    echo "Error: " . $conn->error;
+  }
+
+  $conn->close();
+}
+
+?>
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Payment Page</title>
+  <link rel="stylesheet" href="../src/styles/style.css">
+  <link rel="stylesheet" href="../CSS/Footer.css">
+
+  <link rel="stylesheet" href="paymentform.css">
+  <link rel="stylesheet" href="path/to/icon-font-library.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+  <div class="topnav" style="margin-bottom: 50px;">
+    <a href="../src/index.php"><img src="../admin/images/logo.jpeg" style="width: 130px;min-height: 60px;"></a>
+    <a href="../src/index.php">Home</a>
+    <a href="../src/music.php">Music</a>
+    <a href="../src/movie.php">Movie</a>
+    <a href="../src/myreviewdetails.php" readonly>Feedback</a>
+    <a href="../contactus.html">Contact us</a>
+    <a href="../project/userAcc.php"><i class='fa fa-user-circle' style="font-size:30px ;"></i></a>
+    <a href="#"><i class="fa fa-shopping-cart" style="font-size:30px; color:white;"></i></a>
+  </div>
+
+  <div class="container">
+    <h2>Payment Page</h2>
+    <form method="post" action="submintpay.php">
+      <div class="form-group">
+        <label for="pType">Payment Type:</label>
+        <div class="icon-container">
+          <i class="fa fa-cc-visa" style="color:navy;"></i>
+          <i class="fa fa-cc-amex" style="color:blue;"></i>
+          <i class="fa fa-cc-mastercard" style="color:red;"></i>
+          <i class="fa fa-cc-discover" style="color:orange;"></i>
+        </div>
+        <select name="ptype" id="paymentType">
+          <option value="creditCard">Credit Card</option>
+          <option value="paypal">PayPal</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="cardHolderName">Card Holder Name:</label>
+        <input type="text" id="cardHolderName" name="cardHolderName" required>
+      </div>
+
+      <div class="form-group">
+        <label class="labelC">Expiration Date</label>
+        <select class="ED1" name="Month">
+          <option value="January">January</option>
+          <option value="February">February</option>
+          <option value="March">March</option>
+          <option value="April">April</option>
+          <option value="May">May</option>
+          <option value="June">June</option>
+          <option value="July">July</option>
+          <option value="August">August</option>
+          <option value="September">September</option>
+          <option value="October">October</option>
+          <option value="November">November</option>
+          <option value="December">December</option>
+        </select>
+        <select class="ED2" name="Year">
+          <option value="2020">2020</option>
+          <option value="2021">2021</option>
+          <option value="2022">2022</option>
+          <option value="2023">2023</option>
+          <option value="2024">2024</option>
+          <option value="2025">2025</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="cardNumber">Card Number:</label>
+        <input type="text" id="cardNumber" name="cardNumber" required maxlength="16">
+      </div>
+
+      <div class="form-group">
+        CVV:
+        <input type="text" id="cvv" name="cvv" required maxlength="3">
+      </div>
+
+      <div class="card-icons">
+        <i class="icon-visa"></i>
+        <i class="icon-mastercard"></i>
+        <i class="icon-amex"></i>
+      </div>
+
+      <i class="icon-paypal"></i>
+
+      <input type="submit" class="btn" value="Confirm Payment">
+    </form>
+  </div>
+
+  
+
+  <footer style="margin-top: 50px;">
+    <div class="footer-content">
+      <div class="footer-section">
+        <img src="../admin/image1.png" alt="" width="100px" height="100px">
+        <p>Our mission is to empower creators worldwide to tell their stories through video.</p>
+      </div>
+      <div class="footer-section">
+        <h3 class="fh">License & Terms</h3>
+        <hr class="hr" style="width: 60%;margin-left: 0;"><br>
+        <ul>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Use</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3 class="fh">Company</h3>
+        <hr class="hr" style="width: 40%;margin-left: 0;"><br>
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="../Contactus.html">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="icon">
+      <ul class="social-icons">
+        <li><a class="facebook" href="#"><i class="fab fa-facebook-f"></i></a></li>
+        <li><a class="twitter" href="#"><i class="fab fa-twitter"></i></a></li>
+        <li><a class="dribbble" href="#"><i class="fab fa-instagram"></i></a></li>
+        <li><a class="linkedin" href="#"><i class="fab fa-linkedin-in"></i></a></li>
+      </ul>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2023 Online Music and Movie Store. All rights reserved. | Designed by 666 STATION</p>
+    </div>
+  </footer>
+</body>
+</html>
+

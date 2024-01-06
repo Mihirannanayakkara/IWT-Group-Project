@@ -1,0 +1,32 @@
+
+.topnav{
+    background-color: black;
+    overflow:hidden;
+    padding-top:10px;
+    transform: translateY(-10%);
+    
+}
+.topnav a{
+      padding-top: 10px;
+      float:left;
+      display:block;
+      color:rgba(212, 209, 206, 0.99);
+      text-decoration:none;
+      padding-left:45px ;
+      padding-right:45px;
+      font-family:monospace;
+      font-size:180%;
+      font-weight: bold;
+      background-color:black ;
+}
+.topnav a:hover{
+
+    background: linear-gradient(90deg,rgb(50,50,245)35%,rgb(255,0,221)100%);
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+}
+
+
+.wimg{
+	padding-top: 15px;
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+<body>
+   
+    <section class="container form">
+        <div class="form login">
+            <div class="form-content">
+                <header>Login</header>
+                <form id="loginForm"  method="post" action="submitLog.php">
+                    <div class="input-field">
+                        <input type="email" placeholder="Email" name="mail"  id="mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}" required title="EX:-abc@gmail.com">
+
+                        <input type="password" placeholder="Password" name="pwd" class="input password" id="password">
+                        <i class='bx bx-hide eye-icon' id="eyeIcon"></i>
+                    </div>
+
+                    <div class="form-link">
+                        <a href="Contactus.html" class="forgot-pass">Forgot Password?</a>
+                    </div>
+
+                    <div class="button-field">
+                        <button type="submit" class="btn" onclick="validateForm()">Login</button>
+                    </div>
+
+                    <div class="form-link">
+                        <span>Create an Account? <a href="indexreg.html" class="signup-link">Signup</a></span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: black;
+    color: rgba(252, 250, 250, 0.959);
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    background-color: orange;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  h1 {
+    margin: 0;
+  }
+  
+  main {
+    padding: 20px;
+  }
+  
+  section {
+    margin-bottom: 30px;
+  }
+  
+  h2 {
+    color: orange;
+  }
+  
+  footer {
+    background-color: orange;
+    padding: 10px;
+    text-align: center;
+  }
+  

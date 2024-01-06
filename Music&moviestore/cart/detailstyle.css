@@ -1,0 +1,129 @@
+.movie-details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    margin-top: 50px;
+  }
+  
+  .movie-image {
+    width: 400px;
+    height: auto;
+    margin-right: 20px;
+    margin-left: 60px;
+    border: 5px solid orange;
+  }
+  .cartdetailsname h1 {
+      color:rgb(56, 62, 66);
+      
+
+  }
+  .carddetails{
+
+    margin-left: 600px;
+    transform: translateY(-90%);
+    margin-right: 200px;
+
+  }
+  
+  .cartcard {
+    background-color: #643e1032;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    
+  }
+  
+  .cartprice {
+    font-size: 25px;
+    margin-bottom: 20px;
+    color: #423232;
+  }
+  
+  .cartcard p {
+    font-family: Arial;
+    font-size: 20px;
+    color: #777;
+    margin-bottom: 20px;
+  }
+  
+  .cartcard button {
+    padding: 10px 20px;
+    margin-top: 200px;
+    font-size: 18px;
+    background-color: #dd8819;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .cartcard button:hover {
+    background-color: #09d314;
+  }
+  
+  .footer {
+    background-color: #f2f2f2;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .footer-section {
+    flex: 1 1 300px;
+    margin-bottom: 20px;
+  }
+  
+  .footer-section img {
+    margin-bottom: 10px;
+  }
+  
+  .footer-section h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .footer-section ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .footer-section ul li a {
+    color: #777;
+    text-decoration: none;
+  }
+  
+  .social-icons {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .social-icons li {
+    margin: 0 5px;
+  }
+  
+  .social-icons a {
+    color: #777;
+    text-decoration: none;
+    font-size: 20px;
+  }
+  
+  .footer-bottom {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    font-size: 14px;
+    text-align: center;
+  }
